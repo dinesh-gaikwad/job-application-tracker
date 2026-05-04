@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Tracker | Microsoft Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="ms-header">
+        <div class="container">
+            <h1>Job Application Tracker</h1>
+            <p>Track your applications like a Microsoft PM</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="total-apps">0</h3>
+                <p>Total Applications</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="interviews">0</h3>
+                <p>Interviews</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="offers">0</h3>
+                <p>Offers</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="addBtn" class="btn-primary">+ Add Application</button>
+            <input type="text" id="search" placeholder="Search companies...">
+        </div>
+
+        <div id="applications-grid" class="apps-grid"></div>
+    </main>
+    <!-- Modal -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Add New Application</h2>
+        <form id="appForm">
+            <input type="text" id="company" placeholder="Company Name" required>
+            <input type="text" id="role" placeholder="Job Role" required>
+            <select id="status" required>
+                <option value="">Select Status</option>
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+            <input type="date" id="date" required>
+            <div class="modal-actions">
+                <button type="submit" class="btn-primary">Save</button>
+                <button type="button" id="cancelBtn" class="btn-secondary">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
